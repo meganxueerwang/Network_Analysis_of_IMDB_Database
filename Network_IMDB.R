@@ -1,7 +1,3 @@
-# BIA 658-B Group 6 Social Network Analysis of IMDB Database Group 6 
-# Group Member: Xueling Wang, Yi Luo, Michael Trischetta, Samruddhi Potdar
-
-# Descriptive Analysis: Samruddhi Potdar
 setwd('D:/Work/MSBIA/Social_658/GroupProject')
 
 movie <- read.csv("movie_finaldata.csv")
@@ -21,8 +17,6 @@ plot(movie$title_year, movie$imdb_score, xlab= )
 plot(movie$title_year, movie$imdb_score, xlab= "Year", ylab="IMDB", ylim=c(5,9))
 plot(,movie$title_year, ylab= "Year")
 plot(movie$title_year,movie$budget , xlab= "Year", ylab="Money on Movie")
-
-# Linear Regression Analysis: Yi Luo
 
 movie <- read.csv("movie_finaldata.csv")
 fit_movie <- lm(imdb_score ~ movie_facebook_likes + aspect_ratio + actor_2_facebook_likes + title_year + budget + actor_1_facebook_likes + actor_3_facebook_likes + director_facebook_likes + num_critic_for_reviews + gross + num_voted_users + cast_total_facebook_likes + facenumber_in_poster + num_user_for_reviews, data = movie)
@@ -56,11 +50,6 @@ null=lm(gross~1, data=movie)
 full=lm(gross~ movie_facebook_likes + aspect_ratio + actor_2_facebook_likes + title_year + budget + actor_1_facebook_likes + actor_3_facebook_likes + director_facebook_likes + num_critic_for_reviews + num_voted_users + cast_total_facebook_likes + facenumber_in_poster + num_user_for_reviews, data = movie)
 step(null, scope = list(upper=full), data=movie, direction="both")
 
-
-# Correlation Analysis and Visualization: Michael Trischetta
-# Michael did analysis by Pyhton and Rattle. Please see another word file.
-
-# Social Network Analysis: Xueling Wang
 library( ergm );
 library( sna );
 library( network );
